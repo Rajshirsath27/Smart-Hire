@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Resume History</h2>
+
+<table class="history-table">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>ATS Score</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for report in reports %}
+        <tr>
+            <td>
+                    <a href="{{ url_for('view_report', report_id=report.id) }}">
+                        {{ report.file_name }}
+                    </a>
+            </td>
+
+            <td>{{ report.ats_score }}%</td>
+            <td>{{ report.created_at.strftime("%d %b %Y") }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

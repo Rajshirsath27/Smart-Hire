@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SmartHire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+{% if current_user.is_authenticated %}
+<div class="layout">
+    <div class="sidebar">
+    <div>
+        <div class="logo">SmartHire</div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="{{ url_for('dashboard') }}"
+                   class="nav-item {% if request.endpoint == 'dashboard' %}active{% endif %}">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('history') }}"
+                   class="nav-item {% if request.endpoint == 'history' %}active{% endif %}">
+                    History
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="sidebar-bottom">
+        <a href="{{ url_for('logout') }}" class="nav-item logout">
+            Logout
+        </a>
+    </div>
+</div>
+
+    <div class="main-content">
+{% endif %}
+
+{% block content %}{% endblock %}
+
+{% if current_user.is_authenticated %}
+    </div>
+</div>
+{% endif %}
+
+</body>
+</html> 
+
+

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="premium-login">
+
+    <!-- LEFT SIDE -->
+    <div class="premium-left">
+        <div class="brand-content">
+            <h1>Smart Hire</h1>
+            <p>AI Powered Resume Intelligence Platform</p>
+
+            <div class="feature-list">
+                <div>🚀 ATS Resume Scoring</div>
+                <div>📊 Skill Gap Analytics</div>
+                <div>🎯 AI-Based Suggestions</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="premium-right">
+        <div class="glass-card">
+
+            <h2>Welcome Back 👋</h2>
+            <p class="subtitle">Sign in to continue</p>
+
+            <form method="POST">
+
+                <div class="floating-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="premium-btn">Login</button>
+
+            </form>
+
+            <p class="register-text">
+                Don’t have an account?
+                <a href="/register">Create Account</a>
+            </p>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

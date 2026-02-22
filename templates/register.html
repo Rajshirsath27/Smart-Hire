@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-wrapper">
+
+    <!-- Left Side Branding Section -->
+    <div class="auth-left">
+        <div class="brand-content">
+            <h1>Join Us Today 🚀</h1>
+            <p>Create your account and start building your future with powerful tools and insights.</p>
+        </div>
+    </div>
+
+    <!-- Right Side Form Section -->
+    <div class="auth-right">
+        <div class="auth-card">
+            <h2>Create Account</h2>
+            <p class="subtitle">It only takes a minute</p>
+
+            <form method="POST">
+
+                <div class="floating-group">
+                    <input type="text" name="name" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Create Account
+                </button>
+            </form>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="/login">Login</a>
+            </p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

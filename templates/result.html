@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="result-container">
+
+    <div class="score-card">
+
+        <div 
+            class="score-circle" 
+            style="--score: {{ score }}; --color: 
+            {% if score < 40 %}
+                #ef4444
+            {% elif score < 70 %}
+                #f59e0b
+            {% else %}
+                #10b981
+            {% endif %}
+            ;">
+            <span class="score-text">{{ score }}%</span>
+        </div>
+        
+        <h2>Resume Score</h2>
+        <p>Based on ATS & keyword optimization</p>
+    </div>
+
+    <div class="result-grid">
+
+        <div class="result-box">
+            <h3>✅ Skills Detected</h3>
+            <ul>
+                {% for skill in skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="result-box">
+            <h3>⚠ Improvement Suggestions</h3>
+            <ul>
+                {% for tip in suggestions %}
+                <li>{{ tip }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

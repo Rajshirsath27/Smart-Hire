@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Report Details</h2>
+
+<div class="report-card">
+    <h3>{{ report.file_name }}</h3>
+    <p><strong>ATS Score:</strong> {{ report.ats_score }}%</p>
+    <p><strong>Date:</strong> {{ report.created_at.strftime("%d %b %Y") }}</p>
+</div>
+
+<div class="report-section">
+    <h4>Skills Found</h4>
+    <p>{{ report.skills_found }}</p>
+</div>
+
+<div class="report-section">
+    <h4>Missing Skills</h4>
+    <p>{{ report.missing_skills }}</p>
+</div>
+
+<div class="report-section">
+    <h4>Suggestions</h4>
+    <p>{{ report.suggestions }}</p>
+</div>
+
+{% endblock %}
