@@ -68,8 +68,8 @@ It provides **category-wise scoring**, structured feedback, and a dashboard to t
 ---
 
 📊 **Usage**
-Register and login
-Upload resume (PDF or TXT)
-View ATS score and feedback
-Check history in the dashboard
+- Register and login
+- Upload resume (PDF or TXT)
+- View ATS score and feedback
+- Check history in the dashboard
 
